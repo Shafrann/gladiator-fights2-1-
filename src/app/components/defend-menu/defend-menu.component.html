@@ -1,0 +1,10 @@
+<div class="bodyPart" *ngIf="isShowingDefend">
+  <p>Defend</p>
+
+  <label *ngFor="let bodyPart of bodyParts; let i = index">
+    <input type="checkbox" [(ngModel)]="bodyPart.selected" [value]="bodyPart.label" (change)="updateSelection(i)">
+    {{ bodyPart.label }}
+  </label>
+
+  <button (click)="handleDefendClick()" [disabled]="false">End Turn</button>
+</div>

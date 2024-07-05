@@ -1,0 +1,9 @@
+<div class="bodyPart" *ngIf="isShowingAttack">
+  <p>Attack</p>
+  
+  <label *ngFor="let bodyPart of bodyParts">
+    <input type="radio" name="bodyPart" [(ngModel)]="selectedBodyPart" [value]="bodyPart.value"> {{ bodyPart.label }}
+  </label>
+  
+  <button (click)="handleAttackClick()">Done</button>
+</div>

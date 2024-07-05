@@ -1,0 +1,15 @@
+<div class="main-container" *ngIf="isShowingLevels">
+    <p>Level {{ skills?.level }}</p>
+    <div class="skills">
+        <div class="skill">
+            <p>Strength</p>
+            <p>Agility</p>
+            <p>Stamina</p>
+        </div>
+        <div class="skill">
+            <p>{{ skills.strength }}</p>
+            <p>{{ skills.agility }}</p>
+            <p>{{ skills.stamina }}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="main">
+  <app-player [character]="character"></app-player>
+  <div class="cener-container">
+    <app-level-menu *ngIf="isShowingLevels"></app-level-menu>
+    <app-attack-menu [isShowingAttack]="isShowingAttack" (onAttackClick)="handleAttackClick()"></app-attack-menu>
+    <app-defend-menu [isShowingDefend]="isShowingDefend" [isShowingResult]="isShowingResult" (onDefendClick)="handleDefendClick()"></app-defend-menu>
+    <app-result [isShowingResult]="isShowingResult" (onDefendClick)="handleDefendClick()"></app-result>
+  </div>
+  <app-start-fight (onFightClick)="handleFightClick()" *ngIf="!isShowingCharacter1"></app-start-fight>
+  <app-player [character]="character1" *ngIf="isShowingCharacter1"></app-player>
+</div>
